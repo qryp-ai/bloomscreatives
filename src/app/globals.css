@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;900&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: #01112b;
+  --color-foreground: #f5f7fa;
+
+  --color-card: #3a3a3a;
+  --color-card-foreground: #e8e4dc;
+
+  --color-popover: #3a3a3a;
+  --color-popover-foreground: #e8e4dc;
+
+  --color-primary: #8bed02;
+  --color-primary-foreground: #01112b;
+
+  --color-secondary: #a0aec0;
+  --color-secondary-foreground: #01112b;
+
+  --color-muted: #2c2c2c;
+  --color-muted-foreground: #a0aec0;
+
+  --color-accent: #8bed02;
+  --color-accent-foreground: #01112b;
+
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #fafafa;
+
+  --color-border: #555555;
+  --color-input: #2c2c2c;
+  --color-ring: #8bed02;
+
+  --color-chart-1: #e67e22;
+  --color-chart-2: #2d8659;
+  --color-chart-3: #1e3a5f;
+  --color-chart-4: #f1c40f;
+  --color-chart-5: #e74c3c;
+
+  --color-sidebar: #2c2c2c;
+  --color-sidebar-foreground: #e8e4dc;
+  --color-sidebar-primary: #9bcfc4;
+  --color-sidebar-primary-foreground: #3a3a3a;
+  --color-sidebar-accent: #555555;
+  --color-sidebar-accent-foreground: #e8e4dc;
+  --color-sidebar-border: #555555;
+  --color-sidebar-ring: #9bcfc4;
+
+  --radius-lg: 0.5rem;
+  --radius-md: calc(0.5rem - 2px);
+  --radius-sm: calc(0.5rem - 4px);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+
+    to {
+      height: 0;
+    }
+  }
+
+  --color-bg-primary-dark: #01112b;
+  --color-text-primary-light: #f5f7fa;
+  --color-accent-coral: #d77a6a;
+  --color-accent-teal: #9bcfc4;
+  --color-text-dark: #3a3a3a;
+  --color-bg-light-beige: #e8e4dc;
+  --color-bg-mint: #a8d5ca;
+
+  --font-display: "Bebas Neue",
+  sans-serif;
+  --font-body: "Inter",
+  sans-serif;
+}
+
+/*
+  The default border color has changed to currentColor in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: #555555;
+  }
+}
+
+@layer utilities {
+  body {
+    font-family: var(--font-body);
+  }
+
+  .bg-overlay-accent {
+    background-image:
+      radial-gradient(60% 60% at 50% 0%,
+        color-mix(in oklab, var(--color-accent) 30%, transparent),
+        transparent 70%),
+      radial-gradient(40% 40% at 80% 20%,
+        color-mix(in oklab, var(--color-accent) 20%, transparent),
+        transparent 60%);
+    background-repeat: no-repeat;
+  }
+
+  .accent-glow {
+    box-shadow:
+      0 0 24px rgba(139, 237, 2, 0.35),
+      0 0 64px rgba(139, 237, 2, 0.18);
+  }
+
+  .text-secondary {
+    color: var(--color-muted-foreground);
+  }
+}
+
+@layer base {
+  :root {
+    --background: var(--color-bg-primary-dark);
+    --foreground: var(--color-text-primary-light);
+    --card: var(--color-card);
+    --card-foreground: var(--color-card-foreground);
+    --popover: var(--color-popover);
+    --popover-foreground: var(--color-popover-foreground);
+    --primary: var(--color-primary);
+    --primary-foreground: var(--color-primary-foreground);
+    --secondary: var(--color-secondary);
+    --secondary-foreground: var(--color-secondary-foreground);
+    --muted: var(--color-muted);
+    --muted-foreground: var(--color-muted-foreground);
+    --accent: var(--color-accent);
+    --accent-foreground: var(--color-accent-foreground);
+    --destructive: var(--color-destructive);
+    --destructive-foreground: var(--color-destructive-foreground);
+    --border: var(--color-border);
+    --input: var(--color-input);
+    --ring: var(--color-ring);
+    --chart-1: var(--color-chart-1);
+    --chart-2: var(--color-chart-2);
+    --chart-3: var(--color-chart-3);
+    --chart-4: var(--color-chart-4);
+    --chart-5: var(--color-chart-5);
+    --radius: var(--radius-lg);
+    --sidebar-background: var(--color-sidebar);
+    --sidebar-foreground: var(--color-sidebar-foreground);
+    --sidebar-primary: var(--color-sidebar-primary);
+    --sidebar-primary-foreground: var(--color-sidebar-primary-foreground);
+    --sidebar-accent: var(--color-sidebar-accent);
+    --sidebar-accent-foreground: var(--color-sidebar-accent-foreground);
+    --sidebar-border: var(--color-sidebar-border);
+    --sidebar-ring: var(--color-sidebar-ring);
+  }
+
+  html {
+    /* scroll-behavior: smooth; - Removed to allow instant scroll to top on page load */
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  h1 {
+    font-size: 7.5rem;
+    /* 120px */
+    font-weight: 900;
+  }
+
+  h2 {
+    font-size: 3.75rem;
+    /* 60px */
+    font-weight: 900;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+
+  .text-feature {
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    /* 36px */
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .text-body-large {
+    font-size: 1.25rem;
+    /* 20px */
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  .text-body-regular {
+    font-size: 1rem;
+    /* 16px */
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  .text-button {
+    font-size: 0.875rem;
+    /* 14px */
+    font-weight: 600;
+  }
+
+  .text-small {
+    font-size: 0.875rem;
+    /* 14px */
+    font-weight: 400;
+  }
+
+  .text-accent-italic {
+    font-family: var(--font-body);
+    /* Using body font for italic, as Bebas Neue doesn't have italic */
+    font-size: 1.125rem;
+    /* 18px */
+    font-style: italic;
+    text-transform: uppercase;
+  }
+
+  .container {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    h1 {
+      font-size: 5.625rem;
+      /* 90px */
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      /* 40px */
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Hide Next.js error overlay portal */
+nextjs-portal {
+  display: none !important;
+}
