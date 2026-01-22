@@ -210,7 +210,7 @@ const ClientLogosSection = () => {
                   {isSubmitting ? "Sending..." : "Book free call"}
                 </button>
                 {formResult && (
-                  <p className={`text-sm text-center ${formResult.includes("Successfully") ? "text-green-700" : formResult.includes("Sending") ? "text-[#3A3A3A]/70" : "text-red-600"}`}>
+                  <p className={`text-sm text-center ${formResult.includes("Successfully") || formResult.includes("Thanks!") ? "text-green-700" : formResult.includes("Sending") ? "text-[#3A3A3A]/70" : "text-red-600"}`}>
                     {formResult}
                   </p>
                 )}
