@@ -4,6 +4,7 @@ import WorkSection from "@/components/sections/work-section";
 import ClientLogosSection from "@/components/sections/client-logos-section";
 import ServicesGridSection from "@/components/sections/services-grid-section";
 import ServicesSection from "@/components/sections/services-section";
+import EventsSection from "@/components/sections/events-section";
 import ContactSection from "@/components/sections/contact-section";
 import FooterSection from "@/components/sections/footer-section";
 import StickyNav from "@/components/navigation/sticky-nav";
@@ -18,6 +19,7 @@ const Home = () => {
             <ServicesGridSection />
             <ServicesSection />
             <ContactSection />
+            <EventsSection />
             <FooterSection />
         </main>
     );
