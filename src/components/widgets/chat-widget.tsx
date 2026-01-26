@@ -38,11 +38,11 @@ export default function ChatWidget() {
     try {
       // Direct client-side call to Gemini API
       // WARNING: This exposes the API key to the client.
-      // Ensure VITE_GEMINI_API_KEY is set in your .env file.
-      const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+      // Ensure GEMINI_API_KEY is set in your .env file.
+      const apiKey = import.meta.env.GEMINI_API_KEY;
 
       if (!apiKey) {
-        throw new Error("Missing VITE_GEMINI_API_KEY");
+        throw new Error("Missing GEMINI_API_KEY");
       }
 
       const systemPrompt = `
@@ -105,7 +105,7 @@ Context reminder
       ];
 
       const res = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -355,7 +355,7 @@ Context reminder
           </div>
         </div>
       )}
-      <style jsx>{`
+      <style>{`
         .chat-scroll {
           scrollbar-color: #0B1428 transparent; /* Firefox */
           scrollbar-width: thin;
