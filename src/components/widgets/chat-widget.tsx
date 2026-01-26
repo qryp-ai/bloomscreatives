@@ -275,7 +275,7 @@ Context reminder
               </div>
               <div className="flex items-center gap-2">
                 <a
-                  href="#"
+                  href="https://wa.me/918086523566"
                   aria-label="Open WhatsApp"
                   className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-white/5 text-[#25D366] hover:bg-white/10 border border-white/10 transition-colors"
                   title="WhatsApp"
@@ -285,7 +285,7 @@ Context reminder
                   <FaWhatsapp className="w-7 h-7" />
                 </a>
                 <a
-                  href="#"
+                  href="https://discord.gg/wzqpFKPf"
                   aria-label="Open Discord"
                   className="inline-flex items-center justify-center h-9 w-9 rounded-full bg-white/5 text-[#5865F2] hover:bg-white/10 border border-white/10 transition-colors"
                   title="Discord"

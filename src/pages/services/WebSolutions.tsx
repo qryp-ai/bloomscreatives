@@ -263,7 +263,9 @@ export default function WebSolutions() {
                                         Need a website that sells? Share your brief and we’ll map the perfect solution.
                                     </p>
                                     <a
-                                        href="#contact"
+                                        href="https://wa.me/918086523566"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center rounded-full bg-[#8BED02] text-[#01112B] font-semibold px-8 py-4 text-lg hover:opacity-90 transition"
                                     >
                                         Book free call

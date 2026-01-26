@@ -38,7 +38,7 @@ const ContactSection = () => {
                     </p>
                     <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4">
                         <a
-                            href="mailto:hi@bloomscreative.agency"
+                            href="mailto:bloomscreativesads@gmail.com"
                             className="inline-flex items-center justify-center gap-3 bg-[#E8E4DC] text-[#3A3A3A] rounded-full py-4 px-6 text-button transition-colors hover:bg-opacity-80"
                         >
                             <img
@@ -48,10 +48,10 @@ const ContactSection = () => {
                                 height={18}
                                 className="shrink-0"
                             />
-                            <span>hi@bloomscreative.agency</span>
+                            <span>bloomscreativesads@gmail.com</span>
                         </a>
                         <a
-                            href="tel:(000) 000-0000"
+                            href="tel:8086523566"
                             className="inline-flex items-center justify-center gap-3 bg-[#E8E4DC] text-[#3A3A3A] rounded-full py-4 px-6 text-button transition-colors hover:bg-opacity-80"
                         >
                             <img
@@ -61,13 +61,15 @@ const ContactSection = () => {
                                 height={18}
                                 className="shrink-0"
                             />
-                            <span>(000) 000-0000</span>
+                            <span>+91 8086523566</span>
                         </a>
                     </div>
 
                     <div className="mt-16">
                         <a
-                            href="#contact"
+                            href="https://wa.me/918086523566"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-flex items-center justify-center gap-3 bg-[#3A3A3A] text-[#E8E4DC] rounded-full px-12 py-5 text-button font-semibold uppercase tracking-wider hover:scale-105 transition-transform duration-300"
                         >
                             <FaWhatsapp className="w-5 h-5 text-[#25D366]" />

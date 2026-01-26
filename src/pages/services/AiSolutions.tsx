@@ -266,7 +266,9 @@ export default function AiSolutions() {
                                         Ready to make your business intelligent? Start with a free systems audit — we’ll map one 30-day automation that pays back within months.
                                     </p>
                                     <a
-                                        href="#contact"
+                                        href="https://wa.me/918086523566"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center rounded-full bg-[#8BED02] text-[#01112B] font-semibold px-8 py-4 text-lg hover:opacity-90 transition"
                                     >
                                         Book free call
