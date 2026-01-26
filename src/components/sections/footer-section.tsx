@@ -81,7 +81,7 @@ const FooterSection = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/blooms.creatives?igsh=MWdqZ3lxZHB5bDNoYQ=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center transition-all hover:bg-[#8BED02] hover:border-[#8BED02] hover:text-[#01112B] group"
